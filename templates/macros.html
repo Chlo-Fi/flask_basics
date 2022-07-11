@@ -1,0 +1,23 @@
+{% macro render_dict(dictionary) %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Comments</th>
+        </tr>
+        {% for key, val in dictionary.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ val }}</td>
+                {% if val<= 2 %}
+                    <td>Short</td>
+                {% elif val >= 2 and val <= 3 %}
+                    <td>Medium</td>
+                {% else %}
+                    <td>Long</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endmacro %}

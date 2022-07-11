@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Filters</title>
+</head>
+<body>
+    <h2>Working with Jinja2 Filters:</h2>
+    {% for movie, duration in movies|dictsort(false, 'value') %}
+        <ul>
+            <li>{{ movie|title }} : {{ duration|round(1) }}</li>
+        </ul>
+    {% endfor %}
+
+    <hr>
+
+    <ol type="1">
+        <li>Default Value : {{ name|default('No User Provided', true) }}</li>
+        <br>
+        <li>Capital Case : {{film|capitalize }}</li>
+        <br>
+        <li>Length : {{ movies|length }} Items in the Dictionary</li>
+        <br>
+        <li>First Item : {{ movies|first }}</li>
+        <br>
+        <li>Make a List : {{film|list}}</li>
+        <br>
+        <li>Replace Data : {{ film|replace('carol', 'cookie')|upper }}</li>
+    </ol>
+    <hr>
+
+    <h2>More Filters:</h2>
+    <p>
+        Filters are like little utilities that help us modify the variables or their state. For a complete list of built-in jinja2 filters, check-out
+        <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">this link.</a>
+    </p>
+</body>
+</html>

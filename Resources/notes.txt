@@ -1,0 +1,28 @@
+Installing Virtual Environment on Windows:
+[[Brackets are meant to show variables that you would fill in on your own, ignore them in the actual code]]
+
+1. Command Prompt
+2. pip install virtualenv
+3. mkdir [[directory name]]
+4. cd [[directory name]]
+5. virtualenv [[virtual environment name - i.e. flaskenv]]
+6. Activate it by typing in [[virtual environment name]]\scripts\activate
+
+Source Codes:
+    SECTION 1
+        - Query Strings: https://gist.github.com/haraonline/ee3e89d294438dbad97a3b80882a82ad
+        - Numbers  & Floats: https://gist.github.com/haraonline/6574922f8bcaa6d01fa5f7b28a397010
+        - Rendering HTML Templates - Python: https://gist.github.com/haraonline/a585791ab71379351491577290fe9cd0
+            - Rendering HTML Templates - HTML: https://gist.github.com/haraonline/32cb5d33328d32e2b51d0f8a66e55d39
+    SECTION 2
+        - Jinja 2 1.0 - Python: https://gist.github.com/haraonline/33b4888d246243dd6610ed8cad0ea32f
+            - movies.html: https://gist.github.com/haraonline/c5421ac0d0fee10d1706b44ad0edea5b
+        - Jinja 2 2.0 - Python: https://gist.github.com/haraonline/afeb0c602812589ab8f1e1b6eb4c98bd
+            - table_data.html: https://gist.github.com/haraonline/1fa9d25849ec4519609be0b820a702c7
+        - style.css: https://gist.github.com/haraonline/e35cde7f3c1bec3d2e7a76c3442f2402
+            - table_data.html: https://gist.github.com/haraonline/fc5586d3501b39b546ae028f7680357c
+        - Jinja 2 Filters: https://gist.github.com/haraonline/58408d879abdef1ebe1e8a54c03b1201
+            - filer_data.html: https://gist.github.com/haraonline/70f4a2c99db803f0f6fe9bf248b54b71
+        - Macros - Python: https://gist.github.com/haraonline/e6fde04118483432e31aa6812e30fc1c
+            - macros.html: https://gist.github.com/haraonline/0bfd91ff8aef9a2b110b2df680c4aada
+            - using_macros.html: https://gist.github.com/haraonline/816dca6df1e9d0ff358261cc34437212
