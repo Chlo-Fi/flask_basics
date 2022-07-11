@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -108,6 +108,14 @@ def jinja_macros():
                    'spiderman - homecoming': 1.48}
 
     return render_template('using_macros.html', movies=movies_dict)
+
+# Working with Sessions
+@app.route('/session')
+def session_data():
+    if 'name' not in session:
+        session['name'] = 'harry'
+        return render_template('session.html', session=session, name=session['name'])
+
 
 # Creating Tables with PostGreSQL
 class Publication(db.Model):
