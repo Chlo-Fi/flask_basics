@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, g
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -13,15 +13,22 @@ app.config.update(
 
 db = SQLAlchemy(app)
 
+# Do something before request - 'g' stands for global (to make a global variable) and has to be imported
+@app.before_request
+def some_function():
+    g.string = '<br> This code ran before any request'
+
+# Basic Route
 @app.route('/')
+@app.route('/index')
 def homepage():
-    return 'Welcome to the Home Page!'
+    return 'Welcome to the Home Page!' + g.string
 
 # By typing in the web address/new/?greeting=howdy, this would return "the greeting is:howdy", otherwise its hello
 @app.route('/new/')
 def query_strings(greeting='hello'):
     query_val = request.args.get('greeting', greeting)
-    return '<h1> the greeting is: {0} </h1>'.format(query_val)
+    return '<h1> the greeting is: {0} </h1>'.format(query_val) + g.string
 
 # Passing Variables into URL
 @app.route('/user')
